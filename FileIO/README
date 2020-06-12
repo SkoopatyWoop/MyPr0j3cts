@@ -1,3 +1,3 @@
 A simple file search and edit project. The use of this project is to automate boring stuff like having to scroll through a file
-and change every instance of a word, letter, number, or symbol. If you would liek to try, all you have to do is offer the file name
+and change every instance of a word, letter, number, or symbol. If you would like to try, all you have to do is offer the text file name
 to the FileReader object and put in your custom search.
