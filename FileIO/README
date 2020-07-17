@@ -1,3 +1,12 @@
 A simple file search and edit project. The use of this project is to automate boring stuff like having to scroll through a file
 and change every instance of a word, letter, number, or symbol. If you would like to try, all you have to do is offer the text file name
 to the FileReader object and put in your custom search. The results should be stored on done.txt.
+
+
+STEPS ON HOW TO RUN:
+in terminal:
+javac ReadFile.java
+
+to run:
+java ReadFile reading.txt (insert what to specifically search for without perentheses then click enter)
+result should be saved in a new file called "writeout.txt"
