@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #111111;">
+<div class="w-100 db pam pal-ns" style="color:#ddd">
+    <span class="small title db" style="font-weight:bold">Navy</span>
+    <h1 class="header">Online HTML Editor</h1>
+    </div>
+
+<div>This is real time online HTML Editor</div>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.db {
+    display: block;
+}
+
+.header {
+
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  display: block;
+  position: absolute;
+  top: 206px;
+  left: 86px;
+  font-family: Arial;
+  font-size: 11px;
+  color: #140A00
+}
+
+.bottom {
+top: 256px;
+left: 40px;
+writing-mode: vertical-lr;
+-webkit-transform: rotate(-180deg);
+-moz-transform: rotate(-180deg);
+offset-path: path("M20,20 C20,400 -400,0 200,100");
+animation: move 4000ms infinite alternate ease-in-out;
+width: 40px;
+height: 40px;
+background: cyan;
+
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#container{
+    position:relative;
+    width:500px;
+    height:200px;
+    background-color:#eee;
+}
+
+span.x{
+    font-weight:bold;
+}
+
+span.y{
+    color:red;
+}
+
+span.z{
+    position:absolute;
+    bottom:20;
+    right:0; 
+}
+
+</style>
+</head>
+<body>
+    
+    
+
+<div style="text-align:center">
+  <h1>Round Dots / Circles</h1>
+  <span class="dot"></span>
+  <p></p>
+    <span class="dot bottom"></span>
+</body>
+</html>
