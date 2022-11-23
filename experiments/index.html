@@ -6,102 +6,151 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #111111;">
-<div class="w-100 db pam pal-ns" style="color:#ddd">
-    <span class="small title db" style="font-weight:bold">Navy</span>
-    <h1 class="header">Online HTML Editor</h1>
-    </div>
 
-<div>This is real time online HTML Editor</div>
+<body style="background-color: #EDF7F6;">
+<div style="color:#ddd">
+    <!-- <span class="small title db" style="font-weight:bold">Navy</span> -->
+    <div class="header">
+        <div class="header-item options">Menu</div>
+        <h1 class="header-item">Cafe Magic</h1>
+        <div class="header-item options">Order online</div>
+    </div>
+    <div class="test">
+        <img class="bg" src="https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg">
+        <button class="btn">Hours</button>
+    </div>
+    
+</div>
+
+<!-- <div>This is real time online HTML Editor</div> -->
+
+
+<!-- <div style="text-align:center"> -->
+  <!-- <h1>Round Dots / Circles</h1> -->
+  <!-- <span class="dot"></span> -->
+  <!-- <p></p> -->
+    <!-- <span class="dot bottom"></span> -->
 
 <style>
+    .test {
+    }
+    .bg {
+        width: 100%;
+        z-index: 0;
+        filter: brightness(50%);
+        height: 100%;
+        display: block;
+        height: 100%;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.db {
-    display: block;
-}
-
-.header {
-
-}
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: orange;
-  border-radius: 50%;
-  display: inline-block;
-  display: block;
-  position: absolute;
-  top: 206px;
-  left: 86px;
-  font-family: Arial;
-  font-size: 11px;
-  color: #140A00
-}
-
-.bottom {
-top: 256px;
-left: 40px;
-writing-mode: vertical-lr;
--webkit-transform: rotate(-180deg);
--moz-transform: rotate(-180deg);
-offset-path: path("M20,20 C20,400 -400,0 200,100");
-animation: move 4000ms infinite alternate ease-in-out;
-width: 40px;
-height: 40px;
-background: cyan;
-
-}
-
-@keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
-#container{
-    position:relative;
-    width:500px;
-    height:200px;
-    background-color:#eee;
-}
-
-span.x{
-    font-weight:bold;
-}
-
-span.y{
-    color:red;
-}
-
-span.z{
-    position:absolute;
-    bottom:20;
-    right:0; 
-}
-
-</style>
-</head>
-<body>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+    }
     
     
+    .header {
+        display: flex;
+        height: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 500;
+        text-align: center;
+        align-items: center;
+        border-width: 1px;
+        /* border-style: solid; */
+        /* border-color: red; */
+        background-color: #5CDB95;
+        box-shadow: 0px 0px 10px 0px #5CDB95;
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        color: #e9f8f8;
+    }
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: orange;
+        border-radius: 50%;
+        display: inline-block;
+        display: block;
+        position: absolute;
+        top: 206px;
+        left: 86px;
+        font-family: Arial;
+        font-size: 11px;
+        color: #140A00
+    }
 
-<div style="text-align:center">
-  <h1>Round Dots / Circles</h1>
-  <span class="dot"></span>
-  <p></p>
-    <span class="dot bottom"></span>
+    .header-item {
+        flex: 1;
+    }
+
+    .options {
+        font-size: 20px;
+    }
+ 
+    .bottom {
+    top: 256px;
+    left: 40px;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    offset-path: path("M20,20 C20,400 -400,0 200,100");
+    animation: move 4000ms infinite alternate ease-in-out;
+    width: 40px;
+    height: 40px;
+    background: cyan;
+    
+    }
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* transform: translate(-50%, -50%); */
+        /* -ms-transform: translate(-50%, -50%); */
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+    
+    @keyframes move {
+        0% {
+        offset-distance: 0%;
+        }
+        100% {
+        offset-distance: 100%;
+        }
+    }
+    
+    #container{
+        position:relative;
+        width:500px;
+        height:200px;
+        background-color:#eee;
+    }
+    
+    span.x{
+        font-weight:bold;
+    }
+    
+    span.y{
+        color:red;
+    }
+    
+    span.z{
+        position:absolute;
+        bottom:20;
+        right:0; 
+    }
+    
+    </style>
 </body>
 </html>
