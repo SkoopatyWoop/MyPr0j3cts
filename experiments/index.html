@@ -2,25 +2,24 @@
 <html>
 <title>Online HTML Editor</title>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: #EDF7F6;">
-<div style="color:#ddd">
+<!-- <body style="background-color: #EDF7F6;"> -->
+<body>
     <!-- <span class="small title db" style="font-weight:bold">Navy</span> -->
     <div class="header">
         <div class="header-item options">Menu</div>
         <h1 class="header-item">Cafe Magic</h1>
         <div class="header-item options">Order online</div>
     </div>
-    <div class="test">
-        <img class="bg" src="https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg">
-        <button class="btn">Hours</button>
+        <!-- <button class="btn">Hours</button> -->
+    <div class="bg">
+        <img class="test" src="https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg">
     </div>
-    
-</div>
 
 <!-- <div>This is real time online HTML Editor</div> -->
 
@@ -33,26 +32,37 @@
 
 <style>
     .test {
-    }
-    .bg {
-        width: 100%;
-        z-index: 0;
+        /* height: 100%; */
+        min-height: 100vh;
+        width: 100vw;
+       /* Full height */
+        /* Center and scale the image nicely */
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg"); */
+        /* object-fit: cover; */
         filter: brightness(50%);
-        height: 100%;
         display: block;
-        height: 100%;
+        /* width:100%;
+        height:550px; */
+        object-fit:cover;
+        object-position: 50% 50%;
+
     }
 
-    * {
+    body {
         margin: 0;
         padding: 0;
+        width: 100vw;
         font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+        height:auto;
+        overflow-y: auto;
     }
-    
-    
+ 
     .header {
         display: flex;
-        height: 100px;
+        /* height: 100px; */
         flex-direction: row;
         justify-content: space-between;
         font-weight: 500;
@@ -67,6 +77,7 @@
         position: sticky;
         top: 0;
         color: #e9f8f8;
+        padding-bottom: 1px;
     }
     .dot {
         height: 25px;
@@ -79,16 +90,17 @@
         top: 206px;
         left: 86px;
         font-family: Arial;
-        font-size: 11px;
+        font-size: 20px;
         color: #140A00
     }
 
     .header-item {
         flex: 1;
+        font-size: 2em;
     }
 
     .options {
-        font-size: 20px;
+        font-size: 1.2em;
     }
  
     .bottom {
