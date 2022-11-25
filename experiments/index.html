@@ -32,27 +32,23 @@
 
 <style>
     .test {
-        /* height: 100%; */
         min-height: 100vh;
         width: 100vw;
-       /* Full height */
-        /* Center and scale the image nicely */
-        /* background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg"); */
-        /* object-fit: cover; */
         filter: brightness(50%);
         display: block;
-        /* width:100%;
-        height:550px; */
         object-fit:cover;
+    }
+
+    .options:hover {
+        margin-bottom: -1px;
+        background-color: rgb(187, 118, 86);
+        box-shadow: 0px 0px 30px 0px rgb(19, 17, 17);
     }
 
     body {
         margin: 0;
         padding: 0;
-        width: 100vw;
+        min-width: 100vw;
         font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
         height:auto;
         overflow-y: auto;
@@ -60,14 +56,11 @@
  
     .header {
         display: flex;
-        /* height: 100px; */
         flex-direction: row;
         justify-content: space-between;
         font-weight: 500;
-        text-align: center;
         align-items: center;
-        border-width: 1px;
-        /* border-style: solid; */
+        align-items: stretch;
         /* border-color: red; */
         background-color: #916749;
         box-shadow: 0px 0px 30px 0px #915f42;
@@ -92,13 +85,19 @@
         color: #140A00
     }
 
+
     .header-item {
         flex: 1;
         font-size: 2em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .options {
         font-size: 1.2em;
+        align-self: stretch;  
     }
  
     .bottom {
