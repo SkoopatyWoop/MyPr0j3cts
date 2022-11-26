@@ -35,7 +35,6 @@
 
 <style>
     button {
-        display: block;
         padding: 10px;
         border: 1px solid rgb(182, 146, 146);
         border-radius: 5px;
@@ -49,16 +48,20 @@
         align-items: center;
         margin: 0 auto;
         margin-bottom: 10px;
+        font-size: 20px;
+        margin-right: 100px;
+
     }
+
     .test {
         position: relative;
-        top: 40vh;
+        top: 5vh;
         text-align: center;
     }
 
     .options:not(:focus):hover {
         margin-bottom: -1px;
-        background-color: rgb(182, 162, 148);
+        background-color: rgb(231, 210, 195);
         box-shadow: 0px 0px 5px 0px rgb(150, 139, 131);
     }
 
@@ -75,7 +78,8 @@
         padding: 0;
         min-width: 100vw;
         min-height: 100vmax;
-        background-position: 0px 40px; /*For making the image aligh under header*/
+        background-position: 0px 40px;
+        /*For making the image aligh under header*/
         font-family: -apple-system, 'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
     }
 
@@ -123,7 +127,13 @@
 
     .options {
         font-size: 1.2em;
-        align-self: stretch;
+        -webkit-transition: background-color 0.8s ease, margin-bottom 0.8s ease;
+        -moz-transition: background-color 0.8s ease, margin-bottom 0.8s ease;
+        -ms-transition: background-color 0.8s ease, margin-bottom 0.8s ease;
+        -o-transition: background-color 0.8s ease, margin-bottom 0.8s ease;
+        transition: background-color 0.8s ease, margin-bottom 0.8s ease;
+
+
     }
 
     .bottom {
