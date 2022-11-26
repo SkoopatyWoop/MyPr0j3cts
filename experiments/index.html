@@ -18,9 +18,9 @@
         <h1 class="header-item">Cafe Magic</h1>
         <div class="header-item options">Order online</div>
     </div>
-    <!-- <button class="btn">Hours</button> -->
     <div class="test">
-        <div class="oh">Hi</div>
+        <button class="btn">Deals</button>
+        <button class="btn">Events</button>
     </div>
 
     <!-- <div>This is real time online HTML Editor</div> -->
@@ -34,16 +34,26 @@
 <!-- <span class="dot bottom"></span> -->
 
 <style>
-    .oh {
-        color: white;
+    button {
+        display: block;
+        padding: 10px;
+        border: 1px solid rgb(182, 146, 146);
+        border-radius: 5px;
+        width: 80px;
     }
 
+    .btn {
+        color: white;
+        background-color: black;
+        margin-bottom: 10px;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
     .test {
-        /* min-height: 100vh;
-            min-width: 100vw;
-            filter: brightness(50%);
-            background-repeat: no-repeat;
-            background-size: 100% 100%; */
+        position: relative;
+        top: 40vh;
+        text-align: center;
     }
 
     .options:not(:focus):hover {
@@ -56,7 +66,7 @@
         background-color: gray;
     }
 
-    html, body {
+    body {
         background: url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg");
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -65,7 +75,7 @@
         padding: 0;
         min-width: 100vw;
         min-height: 100vmax;
-        background-position: 0px 40px;
+        background-position: 0px 40px; /*For making the image aligh under header*/
         font-family: -apple-system, 'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
     }
 
@@ -130,12 +140,12 @@
 
     }
 
-    .btn {
+    /* .btn {
         position: absolute;
         top: 50%;
         left: 50%;
-        /* transform: translate(-50%, -50%); */
-        /* -ms-transform: translate(-50%, -50%); */
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         background-color: rgb(0, 0, 0);
         color: white;
         font-size: 16px;
@@ -144,7 +154,7 @@
         cursor: pointer;
         border-radius: 5px;
 
-    }
+    } */
 
     @keyframes move {
         0% {
