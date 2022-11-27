@@ -18,11 +18,16 @@
         <h1 class="header-item">Cafe Magic</h1>
         <div class="header-item options">Order online</div>
     </div>
-    <div class="test">
+    <!-- <div class="test">
         <button class="btn">Deals</button>
         <button class="btn">Events</button>
-    </div>
+    </div> -->
 
+    <div class="container">
+        <a class="btn btn-1">Deals</a>
+        <a class="btn btn-2">Events</a>
+        <a class="btn btn-3">About Us</a> 
+      </div>
     <!-- <div>This is real time online HTML Editor</div> -->
 </body>
 
@@ -34,29 +39,83 @@
 <!-- <span class="dot bottom"></span> -->
 
 <style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content:flex-start;
+  flex-wrap: wrap;
+  width: 40vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  margin-top: 60 px;
+}
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+.btn-3 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.btn-4 {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+.btn-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+
     button {
         padding: 10px;
-        border: 1px solid rgb(182, 146, 146);
+        border: 1px solid rgb(0, 0, 0);
         border-radius: 5px;
         width: 90px;
     }
 
-    .btn {
+    /* .btn {
         color: white;
-        background-color: transparent;
+        background-image: linear-gradient(to right, red , yellow);;
         margin-bottom: 10px;
         align-items: center;
         margin: 0 auto;
         margin-bottom: 10px;
         font-size: 20px;
         margin-right: 100px;     
-    }
+    } */
 
     .test {
         position: relative;
         top: 2vh;
         text-align: center;
         padding-left: 50px;
+        /*TODO: Turn this to a flexbox bruv */
     }
 
     .options:not(:focus):hover {
@@ -70,15 +129,17 @@
     }
 
     body {
-        background: url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg");
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-position: center center;
         margin: 0;
         padding: 0;
         min-width: 100vw;
         min-height: 100vmax;
-        background-position: 0px 40px;
+        background-position-y: 80px;
+        /* background-position: 0px 40px; */
         /*For making the image aligh under header*/
         font-family: -apple-system, 'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
     }
@@ -175,13 +236,13 @@
             offset-distance: 100%;
         }
     }
-
+/* 
     #container {
         position: relative;
         width: 500px;
         height: 200px;
         background-color: #eee;
-    }
+    } */
 
     span.x {
         font-weight: bold;
