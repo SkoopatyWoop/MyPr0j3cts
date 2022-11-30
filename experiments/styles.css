@@ -1,0 +1,227 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:flex-start;
+    flex-wrap: wrap;
+    width: 40vw;
+    margin: 0 auto;
+    min-height: 100vh;
+    margin-top: 60px;
+    margin-left: 32%;
+  }
+  .btn {
+    flex: 1 1 auto;
+    margin-right: 40px;
+    padding: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    margin-top: 100px;
+    font-weight: 520;
+   }
+  
+  /* Demo Stuff End -> */
+  
+  /* <- Magic Stuff Start */
+  
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+  
+  .btn-1 {
+    /* background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%); */
+    background-image: linear-gradient(to right, #6ddb85 0%, #40aeee 51%, #6ddb85 100%);
+  
+  }
+  
+  .btn-2 {
+    /* background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); */
+    /* background-image: linear-gradient(to right, #3ee2ff 0%, #fc704d 51%, #3ee2ff 100%); */
+    background-image: linear-gradient(to right, #30d5c8 0%, #3e46b3 51%, #30D5C8 100%);
+  
+  
+  }
+  
+  .btn-3 {
+    /* background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%); */
+    /* background-image: linear-gradient(to right, #f7c375 0%, #92c58c 51%, #f7c375 100%); */
+    background-image: linear-gradient(to right, #000000 0%, #c565c9 51%, #000000 100%);
+  
+  }
+  
+  .btn-4 {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+  }
+  
+  .btn-5 {
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+  }
+  
+  
+  
+      /* .btn {
+          color: white;
+          background-image: linear-gradient(to right, red , yellow);;
+          margin-bottom: 10px;
+          align-items: center;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          font-size: 20px;
+          margin-right: 100px;     
+      } */
+  
+      .test {
+          position: relative;
+          top: 2vh;
+          text-align: center;
+          padding-left: 50px;
+          /*TODO: Turn this to a flexbox bruv */
+      }
+  
+      .options:not(:focus):hover {
+          margin-bottom: -1px;
+          background-color: rgb(195, 231, 197);
+          box-shadow: 0px 0px 5px 0px rgb(150, 139, 131);
+          color:rgba(0, 0, 0, 0.5)
+      }
+  
+      .options:focus {
+          background-color: gray;
+      }
+  
+      body {
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.acouplecooks.com/wp-content/uploads/2021/08/Cafe-Au-Lait-001s.jpg");
+          /* background-image: linear-gradient(to bottom, rgb(233, 232, 208), rgb(204, 185, 185)); */
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center center;
+          margin: 0;
+          padding: 0;
+          min-width: 100vw;
+          min-height: 100vmax;
+          background-position-y: 80px;
+          /* background-position: 0px 40px; */
+          /*For making the image aligh under header*/
+          font-family: -apple-system, 'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+      }
+  
+      .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-weight: 500;
+          align-items: center;
+          align-items: stretch;
+          /* border-color: red; */
+          background-color: #4d7e74;
+          box-shadow: 0px 0px 12px 0px #4d7e74;
+          z-index: 10;
+          position: sticky;
+          top: 0;
+          color: #e9f8f8;
+          padding-bottom: 1px;
+      }
+  
+      .dot {
+          height: 25px;
+          width: 25px;
+          background-color: orange;
+          border-radius: 50%;
+          display: inline-block;
+          display: block;
+          position: absolute;
+          top: 206px;
+          left: 86px;
+          font-family: Arial;
+          font-size: 20px;
+          color: #140A00
+      }
+  
+  
+      .header-item {
+          flex: 1;
+          font-size: 2em;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+  
+      .options {
+          font-size: 1.2em;
+          -webkit-transition: background-color 0.5s ease, margin-bottom 0.5s ease;
+          -moz-transition: background-color 0.5s ease, margin-bottom 0.5s ease;
+          -ms-transition: background-color 0.5s ease, margin-bottom 0.5s ease;
+          -o-transition: background-color 0.5s ease, margin-bottom 0.5s ease;
+          transition: background-color 0.5s ease, margin-bottom 0.5s ease;
+  
+  
+      }
+  
+      .bottom {
+          top: 256px;
+          left: 40px;
+          writing-mode: vertical-lr;
+          -webkit-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg);
+          offset-path: path("M20,20 C20,400 -400,0 200,100");
+          animation: move 4000ms infinite alternate ease-in-out;
+          width: 40px;
+          height: 40px;
+          background: cyan;
+  
+      }
+  
+      /* .btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: rgb(0, 0, 0);
+          color: white;
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+  
+      } */
+  
+      @keyframes move {
+          0% {
+              offset-distance: 0%;
+          }
+  
+          100% {
+              offset-distance: 100%;
+          }
+      }
+  /* 
+      #container {
+          position: relative;
+          width: 500px;
+          height: 200px;
+          background-color: #eee;
+      } */
+  
+      span.x {
+          font-weight: bold;
+      }
+  
+      span.y {
+          color: red;
+      }
+  
+      span.z {
+          position: absolute;
+          bottom: 20;
+          right: 0;
+      }
