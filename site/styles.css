@@ -150,22 +150,21 @@ section {
     display: flex;
 }
 
-.skill {
-    /* transition: transform .5s; */
+.out-circle {
     height: 160px;
     width: 160px;
     /* position: relative; */
     top: 10px;
     margin-right: 25px;
+    transition: transform 0.5s;
 }
 
-.skill:hover {
+.out-circle:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);
     /* Safari 3-8 */
     transform: scale(1.1);
-    transition: transform 0.5s;
 }
 
 .skill:nth-child(2) {
