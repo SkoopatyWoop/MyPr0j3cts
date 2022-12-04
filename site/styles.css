@@ -91,7 +91,9 @@ section {
     top: 10px;
     margin-right: 25px;
     transition: transform 0.5s;
-    background-color: #e3edf7;
+    /* background-color: #e3edf7; */
+    background-image: linear-gradient(to right, rgb(137, 203, 206), rgb(127, 138, 223));
+
 }
 
 .panel {
@@ -117,7 +119,7 @@ section {
 }
 
 .panel.three {
-    background-image: linear-gradient(to right, rgb(68, 130, 193), rgb(255, 128, 0));
+    background-image: linear-gradient(to right, rgb(49, 142, 235), rgb(255, 128, 0));
     transform: scale3d(0.9, 0.9, 1);
 
 }
