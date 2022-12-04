@@ -100,11 +100,26 @@ section {
     /* background-color: hsla(69, 47%, 38%, 0.05); */
     display: flex;
     justify-content: center;
-    background-color: red;
     width: 62vw;
     height: 20vh;
+    margin-bottom: 2vh;
+}
+
+.panel.one {
     transform: scale3d(0.9, 0.9, 1);
     background-image: linear-gradient(to right, rgb(155, 51, 252), rgb(255, 128, 0));
+}
+
+.panel.two {
+    background-image: linear-gradient(to right, rgb(63, 224, 187), rgb(255, 128, 0));
+    transform: scale3d(0.9, 0.9, 1);
+
+}
+
+.panel.three {
+    background-image: linear-gradient(to right, rgb(68, 130, 193), rgb(255, 128, 0));
+    transform: scale3d(0.9, 0.9, 1);
+
 }
 
 .panel .test {
