@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+:root {
+    --clr-orange: #ff934f;
+}
+
 body {
     background-color: #12141d;
     /* background-color: #e3edf7; */
@@ -12,6 +16,8 @@ body {
     justify-content: center;
     /* display: flex; */
     flex-direction: column;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 section {
@@ -35,18 +41,26 @@ section {
     }
 }
 
+.skill {
+    width: 90%;
+    margin-right: 0px;
+}
+
 .show {
+    margin: 0 auto;
+    color: #fff;
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
     /* color: rgb(154, 136, 104); */
-    color: #ff934f;
+    color: var(--clr-orange);
     flex-direction: column;
+    width: 90%;
 }
 
 .in-circle .thumbnail {
-    width: 70px;
-    height: 70px;
+    width: 60%;
+    height: 60%;
     border-radius: 100%;
     background-color: #e3edf7;
     background-size: contain;
@@ -55,6 +69,7 @@ section {
 
 .list-skill {
     display: flex;
+    width: 90vw;
 }
 
 
@@ -83,29 +98,41 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 160px;
-    width: 160px;
+    height: 4.5em;
+    width: 4.5em;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(92, 91, 91, 0.7);
+    box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -6px -6px 10px -1px rgb(92 91 91 / 70%);
     position: relative;
     top: 10px;
-    margin-right: 25px;
     transition: transform 0.5s;
     /* background-color: #e3edf7; */
-    background-image: linear-gradient(to right, rgb(57, 233, 224), rgb(238, 159, 55));
+    background-image: linear-gradient(to right, rgb(250, 232, 250), rgb(249, 204, 148));
 
+}
+
+@media only screen and (max-width:900px) {
+    .list-skill {
+        flex-direction: column;
+    }
+
+    .skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
 }
 
 .panel {
     margin: auto;
-    border-radius: 12px;
+    border-radius: 0.5em;
     /* background-color: hsla(69, 47%, 38%, 0.05); */
     display: flex;
     justify-content: center;
-    width: 62vw;
-    height: 20vh;
+    width: min(90%, 70.5em);
     margin-bottom: 2vh;
     text-align: center;
+    font-size: .8em;
 }
 
 .panel.one {
@@ -139,8 +166,8 @@ section {
 }
 
 .in-circle {
-    height: 120px;
-    width: 120px;
+    height: 80%;
+    width: 80%;
     border-radius: 50%;
     box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
         -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
