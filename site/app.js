@@ -25,7 +25,7 @@ $(window).scroll(function () {
     console.log("heightElem: " + elemHeight);
     $('.one').css({
         opacity: function () {
-            var elementHeight = $(this).height(),
+            var elementHeight = $(this).outerHeight(),
                 //full opacity when scrollTop reaches elementHeight because div starts scrollTop pixels away from top origin
                 opacity = ((1 - (elementHeight - scrollTop) / (elementHeight)) * 0.8) + 0.2;
 
@@ -38,7 +38,7 @@ $(window).scroll(function () {
 
     $('.one').css({
         transform: function () {
-            var elementHeight = $(this).height(),
+            var elementHeight = $(this).outerHeight(),
                 scale = Math.min(1, ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2);
             scale *= 0.1;
             console.log(scale);
@@ -52,7 +52,7 @@ $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     $('.two').css({
         opacity: function () {
-            var elementHeight = $(this).height(),
+            var elementHeight = $(this).outerHeight(),
                 //because under the first animated div, of same size, need to account for its height offset along with its 2vh margin from the  bottom fo first div
                 opacity = ((1 - (elementHeight - (scrollTop - elementHeight - 2 * vh)) / elementHeight) * 0.8) + 0.2;
             return opacity;
@@ -62,7 +62,7 @@ $(window).scroll(function () {
 
     $('.two').css({
         transform: function () {
-            var elementHeight = $('.two').height(),
+            var elementHeight = $(this).outerHeight(),
                 scale = Math.min(1, ((1 - (elementHeight - (scrollTop - elementHeight - 2 * vh)) / elementHeight) * 0.8) + 0.2);
             scale *= 0.1;
             return `scale3d(${0.9 + scale}, ${0.9 + scale}, ${1})`
@@ -74,7 +74,7 @@ $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     $('.three').css({
         opacity: function () {
-            var elementHeight = $(this).height(),
+            var elementHeight = $(this).outerHeight(),
                 opacity = ((1 - (elementHeight - (scrollTop - elementHeight * 2 - 4 * vh)) / elementHeight) * 0.8) + 0.2;
             return opacity;
         }
@@ -83,7 +83,7 @@ $(window).scroll(function () {
 
     $('.three').css({
         transform: function () {
-            var elementHeight = $('.two').height(),
+            var elementHeight = $(this).outerHeight(),
                 //4vh to account for the last two 2vh margin-bottoms of the last 2 animated divs
                 scale = Math.min(1, ((1 - (elementHeight - (scrollTop - elementHeight * 2 - 4 * vh)) / elementHeight) * 0.8) + 0.2);
             scale *= 0.1;

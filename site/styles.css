@@ -16,7 +16,7 @@ body {
     justify-content: center;
     /* display: flex; */
     flex-direction: column;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -43,7 +43,9 @@ section {
 
 .skill {
     width: 90%;
-    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .show {
@@ -81,18 +83,6 @@ section {
     transform: scale(1.1);
 }
 
-.skill:nth-child(2) {
-    transition-delay: 200ms;
-}
-
-.skill:nth-child(3) {
-    transition-delay: 400ms;
-}
-
-.skill:nth-child(4) {
-    transition-delay: 600ms;
-}
-
 
 .out-circle {
     display: flex;
@@ -101,13 +91,28 @@ section {
     height: 4.5em;
     width: 4.5em;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -6px -6px 10px -1px rgb(92 91 91 / 70%);
+    box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -3px -4px 10px -1px rgba(139, 57, 227, 0.7), 3px 4px 10px -1px rgba(242, 170, 125, 0.7);
     position: relative;
     top: 10px;
     transition: transform 0.5s;
     /* background-color: #e3edf7; */
-    background-image: linear-gradient(to right, rgb(250, 232, 250), rgb(249, 204, 148));
+    background-image: linear-gradient(to right, #c298db, #dbb5a6);
 
+}
+
+
+
+
+.list-skill .hidden.show:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.list-skill .hidden.show:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.list-skill .hidden.show:nth-child(4) {
+    transition-delay: 600ms;
 }
 
 @media only screen and (max-width:900px) {
@@ -128,71 +133,79 @@ section {
     border-radius: 0.5em;
     /* background-color: hsla(69, 47%, 38%, 0.05); */
     display: flex;
-    justify-content: center;
-    width: min(90%, 70.5em);
+    flex: 3;
+    width: min(60%, 70.5em);
     margin-bottom: 2vh;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
+    padding: 1em;
+    font-weight: 700;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descirption {
+    font-size: .65em;
+    font-weight: 500;
+    max-width: 40%;
 }
 
 .panel.one {
-    transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.85, 0.85, 1);
     background-image: linear-gradient(to right, rgb(155, 51, 252), rgb(255, 128, 0));
 }
 
 .panel.two {
     background-image: linear-gradient(to right, rgb(63, 224, 187), rgb(255, 128, 0));
-    transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.85, 0.5, 1);
 
 }
 
 .panel.three {
     background-image: linear-gradient(to right, rgb(49, 142, 235), rgb(255, 128, 0));
-    transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.85, 0.85, 1);
 
 }
 
-.panel .test {
-    display: flex;
-    align-items: center;
-    justify-self: center;
+.panel .quantity {
+    font-size: 2em;
 }
 
 
-.test {
-    display: flex;
+/* .quantity {
     /* transform: translate3d(0px, 0px, 0px) scale3d(0.948714, 0.948714, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
-    /* transform-style: preserve-3d; */
-}
+/* transform-style: preserve-3d;
+} */
 
 .in-circle {
     height: 80%;
     width: 80%;
     border-radius: 50%;
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-        -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(242, 170, 125, 0.7),
+        -0.5px -0.5px 0px rgb(226, 109, 247), 0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
         0px 12px 10px -10px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.skill:first-child .thumbnail {
+.list-skill .hidden.show:nth-child(1) .thumbnail {
     background-image: url("https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png");
 
 }
 
-.skill:nth-child(2) .thumbnail {
+.list-skill .hidden.show:nth-child(2) .thumbnail {
     background-image: url("https://cdn2.iconfinder.com/data/icons/whcompare-isometric-web-hosting-servers/50/value-server-512.png");
 
 }
 
-.skill:nth-child(3) .thumbnail {
+.list-skill .hidden.show:nth-child(3) .thumbnail {
     background-image: url("https://static.thenounproject.com/png/1503825-200.png");
 
 }
 
-.skill:nth-child(4) .thumbnail {
+.list-skill .hidden.show:nth-child(4) .thumbnail {
     background-image: url("https://cdn-icons-png.flaticon.com/512/603/603156.png");
 
 }
