@@ -14,10 +14,12 @@ let vh = window.innerHeight * 0.01,
 
 const hiddenElements = document.querySelectorAll(".hidden")
 hiddenElements.forEach((el) => observer.observe(el));
+let windowSize = $(window).outerHeight();
+var winHeight = $(window).height();
+
 $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     var elementPos = $('.one').offset().top;
-    var winHeight = $(window).height();
     var elemHeight = $('.one').height();
     console.log("scroll top: " + scrollTop);
     console.log("elementPos: " + elementPos);
@@ -25,10 +27,11 @@ $(window).scroll(function () {
     console.log("heightElem: " + elemHeight);
     $('.one').css({
         opacity: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
                 //full opacity when scrollTop reaches elementHeight because div starts scrollTop pixels away from top origin
-                opacity = ((1 - (elementHeight - scrollTop) / (elementHeight)) * 0.8) + 0.2;
-
+                opacity = (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2;
+            console.log("winHeight - fromTop: " + (winHeight - fromTop));
             // console.log("element height" + elementHeight);
             // console.log("scroll top" + scrollTop);
 
@@ -38,8 +41,9 @@ $(window).scroll(function () {
 
     $('.one').css({
         transform: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
-                scale = Math.min(1, ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2);
+                scale = Math.min(1, (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2);
             scale *= 0.1;
             console.log(scale);
             return `scale3d(${0.9 + scale}, ${0.9 + scale}, ${1})`
@@ -52,9 +56,10 @@ $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     $('.two').css({
         opacity: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
                 //because under the first animated div, of same size, need to account for its height offset along with its 2vh margin from the  bottom fo first div
-                opacity = ((1 - (elementHeight - (scrollTop - elementHeight - 2 * vh)) / elementHeight) * 0.8) + 0.2;
+                opacity = (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2;
             return opacity;
         }
     });
@@ -62,8 +67,9 @@ $(window).scroll(function () {
 
     $('.two').css({
         transform: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
-                scale = Math.min(1, ((1 - (elementHeight - (scrollTop - elementHeight - 2 * vh)) / elementHeight) * 0.8) + 0.2);
+                scale = Math.min(1, (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2);
             scale *= 0.1;
             return `scale3d(${0.9 + scale}, ${0.9 + scale}, ${1})`
         }
@@ -74,8 +80,9 @@ $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     $('.three').css({
         opacity: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
-                opacity = ((1 - (elementHeight - (scrollTop - elementHeight * 2 - 4 * vh)) / elementHeight) * 0.8) + 0.2;
+                opacity = (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2;
             return opacity;
         }
     });
@@ -83,9 +90,10 @@ $(window).scroll(function () {
 
     $('.three').css({
         transform: function () {
+            var fromTop = $(this)[0].getBoundingClientRect().top;
             var elementHeight = $(this).outerHeight(),
                 //4vh to account for the last two 2vh margin-bottoms of the last 2 animated divs
-                scale = Math.min(1, ((1 - (elementHeight - (scrollTop - elementHeight * 2 - 4 * vh)) / elementHeight) * 0.8) + 0.2);
+                scale = Math.min(1, (((Math.max(0, winHeight - fromTop)) / (elementHeight)) * 0.8) + 0.2);
             scale *= 0.1;
             return `scale3d(${0.9 + scale}, ${0.9 + scale}, ${1})`
         }
