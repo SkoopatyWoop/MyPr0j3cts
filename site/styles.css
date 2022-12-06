@@ -45,6 +45,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 90%;
+    margin: auto;
     margin-bottom: 2vh;
 }
 
@@ -111,7 +112,7 @@ section {
     height: 4.5em;
     width: 4.5em;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -3px -4px 10px -1px rgba(139, 57, 227, 0.7), 3px 4px 10px -1px rgba(242, 170, 125, 0.7);
+    box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -3px -4px 10px -1px rgba(139, 57, 227, 0.7), 3px 3px 10px -2px rgba(242, 170, 125, 0.7);
     position: relative;
     top: 10px;
     transition: transform 0.5s;
