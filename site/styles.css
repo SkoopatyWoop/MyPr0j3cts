@@ -43,23 +43,40 @@ section {
 
 .deck {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1fr;
+    column-gap: 24px;
+    height: 70vh;
     width: 90%;
     margin: auto;
-    margin-bottom: 2vh;
+    margin-bottom: 30vh;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.img--deck {
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .info {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    padding: .5em;
-    border-radius: 2%;
-    background-color: #2d373d;
-    width: 20%;
+    display: grid;
+    /* margin-right: auto;
+    margin-left: auto; */
+    /* flex-direction: column; */
+    /* align-items: stretch; */
+    /* justify-content: space-between; */
+    /* padding: .5em; */
+    border-radius: 12px;
+    padding: 1em;
+    background-color: hsla(0, 0%, 100%, 0.05);
+    will-change: opacity transform;
+    transform-style: preserve-3d;
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+
 }
 
 .skill {
@@ -237,6 +254,30 @@ section {
 
     .descirption {
         font-size: .55em;
+    }
+
+    .deck {
+        height: 100vh;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-auto-flow: dense;
+        align-items: center;
+        grid-template-columns: auto;
+    }
+
+    .info {
+        height: 100%;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .img--deck {
+        width: 100%;
+        max-height: 80%;
+        border-radius: 6px;
+        /* margin-top: 4rem; */
+        height: 60vh;
     }
 
 }
