@@ -12,6 +12,11 @@
     --clr-cyan: #649ad6;
 }
 
+html {
+    scroll-padding-top: 4rem;
+    /*so  nav bar won't overshadow the headers*/
+}
+
 body {
     background-color: #12141d;
     /* background-color: #e3edf7; */
@@ -81,7 +86,7 @@ nav {
 
 
 .nav-gradient {
-    background: linear-gradient(to right, rgb(63, 93, 117), rgb(37, 56, 72));
+    background: linear-gradient(to right, rgb(62, 84, 124), rgb(0, 0, 0));
     display: flex;
     align-items: center;
     height: 100%;
@@ -102,10 +107,23 @@ nav {
 
 .nav-hamburger {
     display: none;
+    position: absolute;
+    display: none;
+    width: 100%;
+    background-color: #333;
+    z-index: 99;
 }
 
 .nav-panel {
     display: none;
+    position: absolute;
+    width: 25vh;
+    height: 50vh;
+    font-size: 1rem;
+}
+
+#nav-toggle {
+    left: 0;
 }
 
 .intro {
@@ -203,8 +221,19 @@ nav {
 }
 
 #experience {
-    font-size: 1.8em;
+    font-size: 1.7em;
     padding-bottom: 4vh;
+}
+
+.skill::before,
+.skill::after {
+    position: absolute;
+    content: "";
+    top: -.25rem;
+    height: 25px;
+    width: 25px;
+    background: #e3edf7;
+
 }
 
 .skill {
@@ -229,6 +258,13 @@ nav {
 .stat {
     color: #fff;
     margin-bottom: 25vh;
+}
+
+.exp--header {
+    margin-top: 10vh;
+    color: var(--clr-orange);
+    padding-bottom: 0;
+
 }
 
 .stat--header {
@@ -297,7 +333,7 @@ nav {
     /* background-color: hsla(69, 47%, 38%, 0.05); */
     display: flex;
     flex: 3;
-    width: min(60%, 70.5em);
+    width: min(70%, 70.5em);
     margin-bottom: 2vh;
     text-align: center;
     font-size: 1em;
@@ -306,7 +342,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-height: 25vh;
+    max-height: 23vh;
 }
 
 .descirption {
@@ -318,7 +354,7 @@ nav {
 
 .panel.one {
     transform: scale3d(0.85, 0.85, 1);
-    background-image: linear-gradient(to right, rgb(155, 51, 252), rgb(254, 144, 34));
+    background-image: linear-gradient(to right, rgb(59, 200, 141), rgb(121, 70, 231));
 }
 
 .panel.two {
@@ -397,9 +433,10 @@ nav {
     }
 
     .panel {
-        width: 90%;
+        min-width: 90vw;
         font-size: 1.7rem;
         height: 100%;
+        max-height: 22vh;
     }
 
     .descirption {

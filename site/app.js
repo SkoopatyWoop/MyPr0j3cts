@@ -40,7 +40,7 @@ function animateDivs() {
         });
     })
 
-    $('.deck .info').each(function () {
+    $('.deck').each(function () {
         //get the position of the div from the top of the page
         var fromTop = $(this)[0].getBoundingClientRect().top;
         //get the height of the div
@@ -70,4 +70,27 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
+function toggleNavPanel() {
+    var x = document.getElementById("nav-panel");
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "flex";
+        x.style.flexDirection = "column";
+        x.style.background = "rgba(0, 0, 0, 0.8)";
+    }
+}
+
+function hideDrop() {
+    var x = document.getElementById("nav-panel");
+    x.style.display = "none";
+}
+
+
+
+// function toggleNavPanel() {
+
+// }
+
 

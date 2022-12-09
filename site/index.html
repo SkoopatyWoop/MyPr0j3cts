@@ -24,16 +24,15 @@
             </div>
             <div class="nav-hamburger">
                 <button id="nav-toggle" onclick="toggleNavPanel()">
-                    <i class="fa fa-bars"></i>
                 </button>
             </div>
         </div>
-        <!-- <div id="nav-panel" class="nav-panel">
-            <a href="#stats">Stats</a>
-            <a href="#works">Work</a>
-            <a href="#fields">Fields</a>
-            <a href="#contact">Contact Me</a>
-        </div> -->
+        <div id="nav-panel" class="nav-panel">
+            <a href="#experience" onclick="hideDrop()">Experience</a>
+            <a href="#stats" onclick="hideDrop()">Stats</a>
+            <a href="#fields" onclick="hideDrop()">Fields</a>
+            <a href="#contact" onclick="hideDrop()">Contact Me</a>
+        </div>
     </nav>
 
     <section class="hidden">
@@ -50,9 +49,9 @@
             </div>
         </div>
     </section>
-    <section>
-        <h1 class="hidden" id="experience">Experience</h1>
 
+    <section>
+        <h1 class="exp--header" id="experience">Experience</h1>
         <div class="deck deck--intro">
             <div class="info info--deck">
                 <div class="deck--bold ML">ML</div>
