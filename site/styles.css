@@ -23,7 +23,7 @@ body {
     justify-content: center;
     /* display: flex; */
     flex-direction: column;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -32,9 +32,11 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 .hidden {
+    display: flex;
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-100%);
@@ -48,7 +50,71 @@ section {
     }
 }
 
+nav {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+    transition: all 300ms ease;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    padding: 16px;
+    background-color: #ddd;
+    color: black;
+}
+
+
+.nav-gradient {
+    background: linear-gradient(to right, rgb(63, 93, 117), rgb(37, 56, 72));
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    /* margin-left: auto; */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
+.nav-panel {
+    display: none;
+}
+
+.intro {
+    padding-top: 1em;
+}
+
+
 .deck--desc {
+    color: #cdc8c7;
     font-size: 1em;
 }
 
@@ -111,12 +177,6 @@ section {
  */
 
 
-
-
-
-
-.deck--desc {}
-
 .img--deck {
     border-radius: 12px;
     height: 100%;
@@ -142,6 +202,11 @@ section {
 
 }
 
+#experience {
+    font-size: 1.8em;
+    padding-bottom: 4vh;
+}
+
 .skill {
     width: 90%;
     display: flex;
@@ -159,6 +224,15 @@ section {
     color: var(--clr-orange);
     flex-direction: column;
     width: 90%;
+}
+
+.stat {
+    color: #fff;
+    margin-bottom: 25vh;
+}
+
+.stat--header {
+    color: var(--clr-orange);
 }
 
 .in-circle .thumbnail {
@@ -218,7 +292,7 @@ section {
 
 .panel {
     position: relative;
-    margin: auto;
+    /* margin: auto; */
     border-radius: 0.5em;
     /* background-color: hsla(69, 47%, 38%, 0.05); */
     display: flex;
@@ -232,10 +306,11 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-height: 25vh;
 }
 
 .descirption {
-    font-size: .65em;
+    font-size: .80em;
     font-weight: 450;
     max-width: 40%;
     text-align: left;
@@ -301,12 +376,17 @@ section {
 }
 
 @media only screen and (max-width:900px) {
-    .list-skill {
-        flex-direction: column;
+
+    .nav-links {
+        display: none;
     }
 
-    .long-h1 {
-        font-size: 0.8em;
+    .nav-hamburger {
+        display: block;
+    }
+
+    .list-skill {
+        flex-direction: column;
     }
 
     .skill {
@@ -319,6 +399,7 @@ section {
     .panel {
         width: 90%;
         font-size: 1.7rem;
+        height: 100%;
     }
 
     .descirption {
@@ -332,6 +413,7 @@ section {
         align-items: center;
         grid-template-columns: auto;
         row-gap: 47px;
+        margin-bottom: 70vh;
     }
 
     .deck--desc {
@@ -356,126 +438,6 @@ section {
     }
 
 }
-
-/*
-.slider-content .card:first-child .thumbnail {
-    background-image: url("https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png");
-}
-
-.slider-content .card:nth-child(2) .thumbnail {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDsFxujAFR5PnfO8qDfqRDZxFynU4Logxrgg&usqp=CAU");
-}
-
-.slider-content .card:nth-child(3) .thumbnail {
-    background-image: url("https://static.thenounproject.com/png/1503825-200.png");
-}
-
-.slider-content .card:nth-child(4) .thumbnail {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/603/603156.png");
-    background-position-x: 0.3px;
-}
-
-.card .card-content {
-    align-self: flex-end;
-}
-
-
-.slider-horizontal {
-    padding-left: 30px;
-    padding-right: 30px;
-    position: absolute;
-    will-change: transform;
-    left: 0;
-    transition: transform 500ms ease-in-out;
-}
-
-@media (min-width: 768px) {
-    .slider-horizontal {
-        padding-left: calc(16.6% + 26px + 45px);
-        padding-right: 60px;
-    }
-}
-
-.card-sequence .slider-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-
-.card-sequence .slider-content>* {
-    flex-grow: 1;
-    margin-right: 13px;
-}
-
-.card {
-    display: flex;
-    color: #F3F3F3;
-}
-
-.card-sequence .card {
-    position: relative;
-    border-radius: 15px;
-    padding: 30px;
-    background-color: #697c5a;
-    width: 280px;
-    height: 372px;
-    overflow: hidden;
-}
-
-
-.card .thumbnail {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    background-color: #fff;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-/* .dot-0 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-}
-
-.dot-1 {
-    position: absolute;
-    top: -50px;
-    left: 50px;
-    width: 50px;
-    height: 50px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    background-size: contain;
-    background-image: url("https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png");
-}
-
-.sun {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-name: orbit;
-    -webkit-animation-duration: 5s;
-    /* top: 50px;
-    left: 50px; */
-/* }
-
-@-webkit-keyframes orbit {
-    from {
-        -webkit-transform: rotate(0deg)
-    }
-
-    to {
-        -webkit-transform: rotate(360deg)
-    }
-} */
 
 *,
 *:before,

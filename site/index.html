@@ -13,8 +13,31 @@
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <div class="nav-gradient">
+            <div class="nav-links">
+                <a href="#experience">Experience</a>
+                <a href="#stats">Stats</a>
+                <a href="#fields">Fields</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <div class="nav-hamburger">
+                <button id="nav-toggle" onclick="toggleNavPanel()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- <div id="nav-panel" class="nav-panel">
+            <a href="#stats">Stats</a>
+            <a href="#works">Work</a>
+            <a href="#fields">Fields</a>
+            <a href="#contact">Contact Me</a>
+        </div> -->
+    </nav>
+
     <section class="hidden">
-        <h1>Hi, I'm Leul</h1>
+        <h1 class="intro">Hi, I'm Leul</h1>
         <div class="mouse_scroll">
 
             <div class="mouse">
@@ -27,35 +50,43 @@
             </div>
         </div>
     </section>
-    <div class="deck deck--intro">
-        <div class="info info--deck">
-            <div class="deck--bold ML">ML</div>
-            <div class="deck--desc">Researched At Apple & Georgia Institute of Technology.</div>
-        </div>
-        <div class="img--wrap">
-            <img src="https://images.unsplash.com/photo-1598688130667-aff9bba00312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwbmlnaHR8ZW58MHx8MHx8&w=1000&q=80"
-                class="img--deck">
-            <p class="img--description">Pick a side, Neo..</p>
-        </div>
-        <div class="info info--deck">
-            <div class="deck--bold Fullstack">Fullstack</div>
-            <div class="deck--desc">User-Facing & Behind-the-Scenes Services For Google, Cisco, And My Clients</div>
-        </div>
-    </div>
-    <div class="panel one">
-        <div class="quantity">1M+</div>
-        <div class="descirption">Online Users Affected Through My Work.</div>
-    </div>
-    <div class="panel two">
-        <div class="quantity">100+</div>
-        <div class="descirption">Projects Completed For Clients And Organizations</div>
-    </div>
-    <div class="panel three">
-        <div class="quantity">4</div>
-        <div class="descirption">Major Fields Of Experience In The Digital Space.</div>
-    </div>
+    <section>
+        <h1 class="hidden" id="experience">Experience</h1>
 
-    <section class="hidden">
+        <div class="deck deck--intro">
+            <div class="info info--deck">
+                <div class="deck--bold ML">ML</div>
+                <div class="deck--desc">Researched At Apple & Georgia Institute of Technology.</div>
+            </div>
+            <div class="img--wrap">
+                <img src="./laptop-bg.jfif"
+                    alt="laptop on desk with street visible through the house window in the background"
+                    class="img--deck">
+                <p class="img--description">Pick a side, Neo..</p>
+            </div>
+            <div class="info info--deck">
+                <div class="deck--bold Fullstack">Fullstack</div>
+                <div class="deck--desc">User-Facing & Behind-the-Scenes Services For Google, Cisco, And My Clients</div>
+            </div>
+        </div>
+    </section>
+    <section class="show stat" id="stats">
+        <h1 class="stat--header">Stats</h1>
+        <div class="panel one">
+            <div class="quantity">1M+</div>
+            <div class="descirption">Online Users Affected Through My Work.</div>
+        </div>
+        <div class="panel two">
+            <div class="quantity">100+</div>
+            <div class="descirption">Projects Completed For Clients And Organizations</div>
+        </div>
+        <div class="panel three">
+            <div class="quantity">4</div>
+            <div class="descirption">Major Fields Of Experience In The Digital Space.</div>
+        </div>
+    </section>
+
+    <section class="hidden" id="fields">
         <h1>Major Fields</h1>
         <div class="list-skill">
             <div class="hidden">
