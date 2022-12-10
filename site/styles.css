@@ -86,7 +86,7 @@ nav {
 
 
 .nav-gradient {
-    background: linear-gradient(to right, #191933, #191933);
+    background: #D5D9FF;
     display: flex;
     align-items: center;
     height: 100%;
@@ -119,6 +119,14 @@ nav {
     width: 25vh;
     max-height: 50vh;
     font-size: 1rem;
+    background-color: #2d2d33;
+    border-radius: 3px;
+}
+
+.nav-panel a {
+    color: #95BAFD;
+    border-bottom: solid 1px #010101;
+
 }
 
 #nav-toggle {

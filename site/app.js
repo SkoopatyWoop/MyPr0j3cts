@@ -67,6 +67,7 @@ window.onscroll = function () {
         document.getElementsByClassName("navbar")[0].style.top = "0";
     } else {
         document.getElementsByClassName("navbar")[0].style.top = "-50px";
+        document.getElementById("nav-panel").style.display = "none";
     }
     prevScrollpos = currentScrollPos;
 }
@@ -78,7 +79,6 @@ function toggleNavPanel() {
     } else {
         x.style.display = "flex";
         x.style.flexDirection = "column";
-        x.style.background = "rgba(0, 0, 0, 0.8)";
     }
 }
 
