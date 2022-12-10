@@ -84,9 +84,8 @@ nav {
     color: black;
 }
 
-
 .nav-gradient {
-    background: #D5D9FF;
+    background: #170e23;
     display: flex;
     align-items: center;
     height: 100%;
@@ -235,7 +234,7 @@ nav {
     padding-bottom: 4vh;
 }
 
-.skill::before,
+/* .skill::before,
 .skill::after {
     position: absolute;
     content: "";
@@ -244,6 +243,45 @@ nav {
     width: 25px;
     background: #e3edf7;
 
+} */
+
+/* .skill--desc {
+    height: 100%;
+    width: 100%;
+} */
+
+.content {
+    position: absolute;
+    bottom: -10vh;
+    max-width: 25vh;
+    max-height: 50vh;
+    background-color: #e3edf7;
+    font-size: 1vw;
+    border-radius: 4px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateY(50px);
+    /*so text fits inside no matter how long */
+}
+
+.coin:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #e3edf7;
+    top: 0px;
+    transform: rotate(45deg);
+    z-index: -1;
+    left: 38%
 }
 
 .skill {
@@ -251,6 +289,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.coin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .show {
@@ -294,6 +338,8 @@ nav {
     display: flex;
     width: 90vw;
 }
+
+
 
 
 .out-circle:hover {
@@ -425,6 +471,11 @@ nav {
 
     .nav-links {
         display: none;
+    }
+
+    .nav-gradient {
+        background: #D5D9FF;
+
     }
 
     .nav-hamburger {
