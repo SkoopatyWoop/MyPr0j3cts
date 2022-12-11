@@ -353,20 +353,26 @@ nav {
 }
 
 .intro--name {
-    margin-top: 7vh;
+    margin-top: 8vh;
+    font-size: 3vw;
 }
 
 
 .curved.upper {
     z-index: -1;
     position: absolute;
-    top: 4vh;
+    top: 5vh;
+    height: 30vh;
 }
 
+
 .curved svg {
+    width: 100%;
+    height: 100%;
     display: block;
     width: 100vw;
     color: #272727;
+    min-height: 12vh;
 }
 
 
@@ -496,6 +502,20 @@ nav {
 }
 
 @media only screen and (max-width:900px) {
+    .intro {
+        padding-bottom: 5vh;
+        background: rgba(0, 0, 0, 1);
+        z-index: -1;
+    }
+
+    .intro--name {
+        color: #1660ea;
+        font-size: 7vw;
+    }
+
+    .upper path {
+        fill: #000000;
+    }
 
     .coin {
         display: flex;
@@ -605,7 +625,7 @@ nav {
     margin: 0 auto;
     width: 24px;
     height: 100px;
-    margin-top: 7vh;
+    margin-top: 18vh;
 }
 
 
