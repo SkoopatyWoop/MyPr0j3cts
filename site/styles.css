@@ -32,6 +32,7 @@ body {
     font-size: 2rem;
     text-align: center;
     overflow-x: hidden;
+    position: relative;
 }
 
 section {
@@ -69,6 +70,7 @@ nav {
 .navbar {
     position: fixed;
     transition: all 300ms ease;
+    display: block;
 }
 
 .navbar a {
@@ -80,6 +82,7 @@ nav {
     text-decoration: none;
 }
 
+
 .navbar a:hover {
     padding: 16px;
     background-color: #ddd;
@@ -87,7 +90,8 @@ nav {
 }
 
 .nav-gradient {
-    background: #170e23;
+    /* 170e23 */
+    background: #373922;
     display: flex;
     align-items: center;
     height: 100%;
@@ -133,7 +137,6 @@ nav {
 #nav-toggle {
     left: 0;
 }
-
 
 
 .deck--desc {
@@ -341,36 +344,31 @@ nav {
     width: 90vw;
 }
 
-/* svg {
-    min-width: 100vw;
-} */
+svg {
+    position: relative;
+    display: block;
+    top: 49px;
+    left: 0px;
+    height: 30vh;
+    width: 100%;
+}
+
+path {
+    width: 100%;
+}
 
 .intro {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    top: 50px;
+    font-size: 0.5em;
 }
 
 .intro--name {
-    margin-top: 8vh;
-    font-size: 3vw;
-}
-
-
-.curved.upper {
-    z-index: -1;
-    position: absolute;
-    top: 5vh;
-    height: 30vh;
-}
-
-
-.curved svg {
-    display: block;
-    width: 100vw;
-    color: #272727;
-    min-height: 12vh;
+    color: rgb(245, 107, 52)
 }
 
 
@@ -500,19 +498,8 @@ nav {
 }
 
 @media only screen and (max-width:900px) {
-    .intro {
-        padding-bottom: 5vh;
-        background: rgba(0, 0, 0, 1);
-        z-index: -1;
-    }
-
     .intro--name {
         color: #1660ea;
-        font-size: 7vw;
-    }
-
-    .upper path {
-        fill: #000000;
     }
 
     .coin {
