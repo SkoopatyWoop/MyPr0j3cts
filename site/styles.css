@@ -368,7 +368,7 @@ path {
 }
 
 .intro--name {
-    color: rgb(245, 107, 52)
+    color: var(--clr-orange);
 }
 
 
@@ -498,8 +498,9 @@ path {
 }
 
 @media only screen and (max-width:900px) {
-    .intro--name {
-        color: #1660ea;
+
+    path {
+        fill: #D7E2FE;
     }
 
     .coin {
@@ -533,7 +534,7 @@ path {
     }
 
     .nav-gradient {
-        background: #D5D9FF;
+        background: #D7E2FE;
 
     }
 
