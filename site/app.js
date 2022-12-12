@@ -63,10 +63,10 @@ $(window).scroll(animateDivs);
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos >= currentScrollPos || window.scrollY <= 50) {
+    if (prevScrollpos >= currentScrollPos || window.scrollY <= 30) {
         document.getElementsByClassName("navbar")[0].style.top = "0";
     } else {
-        document.getElementsByClassName("navbar")[0].style.top = "-30px";
+        document.getElementsByClassName("navbar")[0].style.top = "-50px";
         document.getElementById("nav-panel").style.display = "none";
     }
     prevScrollpos = currentScrollPos;
