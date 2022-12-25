@@ -588,8 +588,8 @@ label {
 }
 
 input, textarea {
-    width: 30vw;
-    height: 5vh;
+    width: 80%;
+    min-height: 6%;
     background:rgb(174, 186, 199);
     border-radius: 4px;
     border: 0;
@@ -597,8 +597,12 @@ input, textarea {
     font-family: Inter, sans-serif;
 }
 
+#contact {
+    margin-top: 10vh;
+}
+
 #submit {
-    width: 10vw;
+    width: 30%;
     font-weight: 700;
     background: rgb(73, 127, 209);
     color: white;
@@ -606,25 +610,30 @@ input, textarea {
 }
 
 textarea {
+    width: 80%;
     margin-top: 4vh;
-    height: 6vh;
+    min-height: 10%;
 }
 
 #contact-form {
-    width: 40vw;
-    height: 60vh;
+    width: 70vw;
+    height: 70vh;
     /* background: #363922; */
     /* background: rgba(64, 135, 150, 0.9); */
     background: #67a78a;
     padding: 1em;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(40, 49, 59, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact-text {
     font-family: Josefin Sans, sans-serif;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 2em;
     margin-bottom: 5px;
     z-index: 4;
     color: rgb(51, 32, 32);
@@ -770,6 +779,10 @@ textarea {
         border-radius: 6px;
         /* margin-top: 4rem; */
         height: 60vh;
+    }
+
+    #contact-form {
+        width: 90vw;
     }
 
 }
