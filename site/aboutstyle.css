@@ -616,7 +616,7 @@ textarea {
 }
 
 #contact-form {
-    width: 70vw;
+    width: 50vw;
     height: 70vh;
     /* background: #363922; */
     /* background: rgba(64, 135, 150, 0.9); */
@@ -633,7 +633,7 @@ textarea {
 .contact-text {
     font-family: Josefin Sans, sans-serif;
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1.5rem;
     margin-bottom: 5px;
     z-index: 4;
     color: rgb(51, 32, 32);
