@@ -602,11 +602,17 @@ input, textarea {
 }
 
 #submit {
-    width: 30%;
+    width: 25%;
+    min-height: 8%;
     font-weight: 700;
     background: rgb(73, 127, 209);
     color: white;
-    box-shadow: 0 0 6px rgba(82, 116, 153, 0.5);
+    box-shadow: 0 0 6px rgba(67, 74, 82, 0.5);
+    transition: all 1s ease;
+}
+
+#submit:hover {
+    box-shadow: 0 0 10px #637c74;
 }
 
 textarea {
@@ -617,7 +623,7 @@ textarea {
 
 #contact-form {
     width: 50vw;
-    height: 70vh;
+    height: 75vh;
     /* background: #363922; */
     /* background: rgba(64, 135, 150, 0.9); */
     background: #67a78a;
