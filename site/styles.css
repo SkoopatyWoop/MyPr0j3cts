@@ -33,6 +33,7 @@ body {
     text-align: center;
     overflow-x: hidden;
     position: relative;
+    overscroll-behavior-y: none;
 }
 
 section {
@@ -279,8 +280,8 @@ nav {
 .content::before {
     content: "";
     position: absolute;
-    width: 4vh;
-    height: 4vh;
+    width: 3vh;
+    height: 3vh;
     background: #272727;
     top: 0px;
     left: 40%;
@@ -370,7 +371,6 @@ path {
 .intro--name {
     color: var(--clr-orange);
 }
-
 
 .out-circle:hover {
     -ms-transform: scale(1.1);
@@ -508,6 +508,20 @@ path {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+
+    .coin:hover .content {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        z-index: 1;
+        -ms-transform: none;
+        /* IE 9 */
+        -webkit-transform: none;
+        /* Safari 3-8 */
+        transform: none;
     }
 
     .content {
@@ -517,12 +531,11 @@ path {
         transform: none;
         transition: 0s;
         bottom: 0;
-        right: 1.2vw;
         font-size: 2vh;
 
     }
 
-    .content::before {
+    .content::after {
         left: 50%;
         top: -10%;
         height: 1vh;

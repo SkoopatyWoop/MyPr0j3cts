@@ -87,6 +87,43 @@ function hideDrop() {
     x.style.display = "none";
 }
 
+const form = document.getElementById('contact-form');
+const errorMessage = document.getElementById('error-message');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const phone = form.elements.phone.value;
+    const message = form.elements.message.value;
+
+    if (!name || !(email || phone)) {
+        errorMessage.style.visibility = 'visible';
+        return false;
+    } else {
+        // Form is valid, so you can submit it or do other actions here
+        errorMessage.style.display = 'none';
+        var params = {
+            name, email, phone, message,
+        };
+        sendMail(params)
+    }
+
+});
+
+function sendMail(clientInfo) {
+    const serviceID = "service_35xmzqh";
+    const templateID = "template_yjp18mm";
+    emailjs.send(serviceID, templateID, clientInfo).then(response => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("message").value = "";
+        console.log(response);
+        alert("your message sent successfully");
+
+    }).catch(err => console.log(err));
+}
 
 
 // function toggleNavPanel() {
