@@ -99,7 +99,6 @@ form.addEventListener('submit', (event) => {
 
     if (!name || !(email || phone)) {
         errorMessage.style.visibility = 'visible';
-        return false;
     } else {
         // Form is valid, so you can submit it or do other actions here
         errorMessage.style.display = 'none';
@@ -126,8 +125,6 @@ function sendMail(clientInfo) {
 }
 
 
-// function toggleNavPanel() {
 
-// }
 
 

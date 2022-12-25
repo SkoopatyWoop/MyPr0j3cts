@@ -24,7 +24,7 @@
     <nav class="navbar">
         <div class="nav-gradient">
             <div class="nav-links">
-                <a href="#experience">Experience</a>
+                <a href="#product">Product</a>
                 <a href="#stats">Stats</a>
                 <a href="#fields">Fields</a>
                 <a href="#contact">Contact Us</a>
@@ -32,7 +32,7 @@
             <img class="nav-hamburger" src="./ham.jpg" onclick="toggleNavPanel()">
         </div>
         <div id="nav-panel" class="nav-panel">
-            <a href="#experience" onclick="hideDrop()">Experience</a>
+            <a href="#product" onclick="hideDrop()">Product</a>
             <a href="#stats" onclick="hideDrop()">Stats</a>
             <a href="#fields" onclick="hideDrop()">Fields</a>
             <a href="#contact" onclick="hideDrop()">Contact Me</a>
@@ -49,13 +49,13 @@
         <h1 class="intro--name">Axelorate</h1>
     </div>
 
-    <section>
+    <section id="product">
         <div class="skewed">
             <div class="text">
                 <h1>Have a website that makes a difference</h1>
                 <p>We strive to make you a platform that fits <strong>your needs</strong>, a platform that you're proud
                     of.</p>
-                <a class="call--btn" href="#">Contact Us</a>
+                <a class="call--btn" href="#contact">Contact Us</a>
             </div>
             <div class="image">
                 <img src="t1p.png">
@@ -137,7 +137,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <form id="contact-form">
             <div class="contact-text">GET IN TOUCH</div>
             <input type="text" id="name" name="name" placeholder="Name" required><br>
@@ -147,11 +147,7 @@
             <input id="submit" type="submit" value="Submit">
         </form>
     </section>
-    <div id="error-message">Please privde a Name & an Email/Phone Number.</div>
-    <!-- 
-    <section class="hidden">
-        It's really good.
-    </section> -->
+    <div id="error-message">Please privde a name & email/phone number.</div>
 
 </body>
 

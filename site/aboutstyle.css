@@ -614,7 +614,8 @@ textarea {
     width: 40vw;
     height: 60vh;
     /* background: #363922; */
-    background: rgba(64, 135, 150, 0.9);
+    /* background: rgba(64, 135, 150, 0.9); */
+    background: #67a78a;
     padding: 1em;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(40, 49, 59, 0.7);
@@ -632,6 +633,7 @@ textarea {
 #error-message {
     visibility: hidden;
     margin-top: -30vh;
+    font-family: Josefin Sans, sans-serif;
 }
 
 @media  screen and (max-width:900px) {
