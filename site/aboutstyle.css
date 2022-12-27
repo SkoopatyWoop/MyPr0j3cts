@@ -570,22 +570,22 @@ path {
 }
 
 .list-skill .hidden.show:nth-child(1) .thumbnail {
-    background-image: url("https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png");
+    background-image: url("webapp.png");
 
 }
 
 .list-skill .hidden.show:nth-child(2) .thumbnail {
-    background-image: url("https://cdn2.iconfinder.com/data/icons/whcompare-isometric-web-hosting-servers/50/value-server-512.png");
+    background-image: url("server.png");
 
 }
 
 .list-skill .hidden.show:nth-child(3) .thumbnail {
-    background-image: url("https://static.thenounproject.com/png/1503825-200.png");
+    background-image: url("nn.png");
 
 }
 
 .list-skill .hidden.show:nth-child(4) .thumbnail {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/603/603156.png");
+    background-image: url("db.png");
 
 }
 
