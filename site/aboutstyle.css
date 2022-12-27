@@ -527,7 +527,7 @@ path {
 
 .panel.one {
     transform: scale3d(0.85, 0.85, 1);
-    background-image: url('./panel-one.jpg');
+    background-image: url('img/panel-one.jpg');
     background-size: cover;
     /* background-image: linear-gradient(to right, rgb(59, 200, 141), rgb(121, 70, 231)); */
 }
@@ -535,7 +535,7 @@ path {
 .panel.two {
     /* background-image: linear-gradient(to right, rgb(245, 107, 52), rgb(47, 184, 253)); */
     transform: scale3d(0.85, 0.5, 1);
-    background-image: url('./panel-two.jpeg');
+    background-image: url('img/panel-two.jpeg');
     background-size: cover;
 
 }
@@ -543,7 +543,7 @@ path {
 .panel.three {
     /* background-image: linear-gradient(to right, rgb(55, 155, 255), rgb(255, 75, 195)); */
     transform: scale3d(0.85, 0.85, 1);
-    background-image: url('./panel-three.jpg');
+    background-image: url('img/panel-three.jpg');
     background-size: cover;
 }
 
@@ -570,22 +570,22 @@ path {
 }
 
 .list-skill .hidden.show:nth-child(1) .thumbnail {
-    background-image: url("webapp.png");
+    background-image: url("img/webapp.png");
 
 }
 
 .list-skill .hidden.show:nth-child(2) .thumbnail {
-    background-image: url("server.png");
+    background-image: url("img/server.png");
 
 }
 
 .list-skill .hidden.show:nth-child(3) .thumbnail {
-    background-image: url("nn.png");
+    background-image: url("img/nn.png");
 
 }
 
 .list-skill .hidden.show:nth-child(4) .thumbnail {
-    background-image: url("db.png");
+    background-image: url("img/db.png");
 
 }
 
