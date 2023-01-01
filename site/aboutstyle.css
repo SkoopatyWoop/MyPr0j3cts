@@ -92,7 +92,8 @@ nav {
 
 .nav-gradient {
     /* 170e23 */
-    background: #373922;
+    /* background: #373922; */
+    background: #6BE9A8;
     display: flex;
     align-items: center;
     height: 100%;
@@ -150,7 +151,8 @@ h1 {
     width: 99%;
     color: #fcfcfc;
     display: flex;
-    background: #363922;
+    background: #2db0d8;
+    /* background: #363922; */
     margin-top: 20%;
     margin-bottom: 10%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -180,9 +182,10 @@ a {
     transform-origin: center;
     width: 90%;
     height: 140%;
-    box-shadow: 0 0 1000px rgba(160, 78, 72, 0.7);
+    box-shadow: 0 0 1000px #2db0d8;
     z-index: 0;
-    background: #363922;
+    background: #2db0d8;
+    /* background: #363922; */
 
 }
 
@@ -218,7 +221,7 @@ a {
 }
 
 .call--btn:hover {
-    box-shadow: 0 0 10px #1b1a18;
+    box-shadow: 0 0 10px #FE934F;
 }
 
 
@@ -451,12 +454,12 @@ path {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    top: 30px;
+    top: 50px;
     font-size: 0.5em;
 }
 
 .intro--name {
-    color: var(--clr-orange);
+    color: black;
 }
 
 .out-circle:hover {
@@ -596,12 +599,12 @@ label {
 input, textarea {
     width: 60%;
     min-height: 8%;
-    background:rgb(174, 186, 199);
     border-radius: 4px;
     border: 0;
     margin-top: 4vh;
     font-family: Inter, sans-serif;
     max-height: 5%;
+    background-color:rgb(223, 223, 223);
 }
 
 #contact {
@@ -612,14 +615,13 @@ input, textarea {
     width: 20%;
     min-height: 8%;
     font-weight: 700;
-    background: rgb(73, 127, 209);
+    background: #2db0d8;
     color: white;
-    box-shadow: 0 0 6px rgba(67, 74, 82, 0.5);
     transition: all 1s ease;
 }
 
 #submit:hover {
-    box-shadow: 0 0 10px #637c74;
+    box-shadow: 0 0 10px #2db0d8;
 }
 
 textarea {
@@ -633,7 +635,7 @@ textarea {
     height: 65vh;
     /* background: #363922; */
     /* background: rgba(64, 135, 150, 0.9); */
-    background: #67a78a;
+    background: var(--clr-orange);
     padding: 1em;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(40, 49, 59, 0.7);
@@ -644,7 +646,7 @@ textarea {
 }
 
 ::placeholder {
-    color: rgb(80, 79, 79);
+    color: rgb(90, 88, 88);
 }
 
 .form-contain {
@@ -670,7 +672,11 @@ textarea {
 @media  screen and (max-width:900px) {
 
     path {
-        fill: #363922;
+        fill: #ffffff00;
+    }
+
+    .intro--name {
+        color: var(--clr-orange);
     }
 
     .skewed {
@@ -678,6 +684,7 @@ textarea {
         width: 95%;
         height: 100%;
         margin-bottom: 20vh;
+        background-color: #00C6BC;
     }
 
     .image, .text {
@@ -696,6 +703,8 @@ textarea {
         top: -35%;
         left: 50%;
         transform: translateX(-50%) rotate(8deg);
+        box-shadow: 0 0 1000px #00C6BC;
+        background: #00C6BC;
     }
 
     .panel.two {
