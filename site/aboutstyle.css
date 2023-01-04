@@ -92,8 +92,7 @@ nav {
 
 .nav-gradient {
     /* 170e23 */
-    /* background: #373922; */
-    background: #6BE9A8;
+    background: #373922;
     display: flex;
     align-items: center;
     height: 100%;
@@ -135,95 +134,6 @@ nav {
     border-bottom: solid 1px #010101;
 
 }
-
-p {
-    color: #f8c89b;
-    font-size: 0.9em;
-    line-height: 30px;
-}
-
-h1 {
-    margin: 10;
-
-}
-
-.skewed {
-    width: 99%;
-    color: #fcfcfc;
-    display: flex;
-    background: #2db0d8;
-    /* background: #363922; */
-    margin-top: 20%;
-    margin-bottom: 10%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    clear: both;
-    border-radius: 6px;
-}
-
-a {
-    color: #3e19a5;
-    text-decoration: none;
-}
-
-.image {
-    width: 50%;
-    position: relative;
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.image::before {
-    content: '';
-    position: absolute;
-    left: -6.1em;
-    top: 50%;
-    /* transform: translateY(-50%) rotate(20deg); */
-    transform: translateX(-50%) translateY(-50%) skewX(-0.18rad);
-    transform-origin: center;
-    width: 90%;
-    height: 140%;
-    box-shadow: 0 0 1000px #2db0d8;
-    z-index: 0;
-    background: #2db0d8;
-    /* background: #363922; */
-
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-}
-
-.text {
-    padding: 1.5em;
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    flex-direction: column;
-}
-
-.call--btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 45px;
-    background: #FE934F;
-    text-align: center;
-    border-radius: 5px;
-    color: #e0e0df; 
-    font-weight: bold;
-    line-height: 25px;
-    font-size: 1.2rem;
-    transition: all 1s ease;
-
-}
-
-.call--btn:hover {
-    box-shadow: 0 0 10px #FE934F;
-}
-
 
 #nav-toggle {
     left: 0;
@@ -459,7 +369,7 @@ path {
 }
 
 .intro--name {
-    color: black;
+    color: var(--clr-orange);
 }
 
 .out-circle:hover {
@@ -530,24 +440,19 @@ path {
 
 .panel.one {
     transform: scale3d(0.85, 0.85, 1);
-    background-image: url('img/panel-one.jpg');
-    background-size: cover;
-    /* background-image: linear-gradient(to right, rgb(59, 200, 141), rgb(121, 70, 231)); */
+    background-image: linear-gradient(to right, rgb(59, 200, 141), rgb(121, 70, 231));
 }
 
 .panel.two {
-    /* background-image: linear-gradient(to right, rgb(245, 107, 52), rgb(47, 184, 253)); */
+    background-image: linear-gradient(to right, rgb(245, 107, 52), rgb(47, 184, 253));
     transform: scale3d(0.85, 0.5, 1);
-    background-image: url('img/panel-two.jpeg');
-    background-size: cover;
 
 }
 
 .panel.three {
-    /* background-image: linear-gradient(to right, rgb(55, 155, 255), rgb(255, 75, 195)); */
+    background-image: linear-gradient(to right, rgb(55, 155, 255), rgb(255, 75, 195));
     transform: scale3d(0.85, 0.85, 1);
-    background-image: url('img/panel-three.jpg');
-    background-size: cover;
+
 }
 
 .panel .quantity {
@@ -573,142 +478,29 @@ path {
 }
 
 .list-skill .hidden.show:nth-child(1) .thumbnail {
-    background-image: url("img/webapp.png");
+    background-image: url("https://cdn1.iconfinder.com/data/icons/creative-design-honey-vol-2/64/WEB_DESIGN-512.png");
 
 }
 
 .list-skill .hidden.show:nth-child(2) .thumbnail {
-    background-image: url("img/server.png");
+    background-image: url("https://cdn2.iconfinder.com/data/icons/whcompare-isometric-web-hosting-servers/50/value-server-512.png");
 
 }
 
 .list-skill .hidden.show:nth-child(3) .thumbnail {
-    background-image: url("img/nn.png");
+    background-image: url("https://static.thenounproject.com/png/1503825-200.png");
 
 }
 
 .list-skill .hidden.show:nth-child(4) .thumbnail {
-    background-image: url("img/db.png");
+    background-image: url("https://cdn-icons-png.flaticon.com/512/603/603156.png");
 
 }
 
-label {
-    color:rgb(107, 176, 211);
-}
-
-input, textarea {
-    width: 60%;
-    min-height: 8%;
-    border-radius: 4px;
-    border: 0;
-    margin-top: 4vh;
-    font-family: Inter, sans-serif;
-    max-height: 5%;
-    background-color:rgb(223, 223, 223);
-}
-
-#contact {
-    margin-top: 10vh;
-}
-
-#submit {
-    width: 20%;
-    min-height: 8%;
-    font-weight: 700;
-    background: #2db0d8;
-    color: white;
-    transition: all 1s ease;
-}
-
-#submit:hover {
-    box-shadow: 0 0 10px #2db0d8;
-}
-
-textarea {
-    width: 60%;
-    margin-top: 4vh;
-    min-height: 10%;
-}
-
-#contact-form {
-    width: 50vw;
-    height: 65vh;
-    /* background: #363922; */
-    /* background: rgba(64, 135, 150, 0.9); */
-    background: var(--clr-orange);
-    padding: 1em;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(40, 49, 59, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-::placeholder {
-    color: rgb(90, 88, 88);
-}
-
-.form-contain {
-    width: 100%;
-    height: 100%;
-}
-
-.contact-text {
-    font-family: Josefin Sans, sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    z-index: 4;
-    color: rgb(51, 32, 32);
-}
-
-#error-message {
-    visibility: hidden;
-    margin-top: -30vh;
-    font-family: Josefin Sans, sans-serif;
-}
-
-@media  screen and (max-width:900px) {
+@media only screen and (max-width:900px) {
 
     path {
-        fill: #ffffff00;
-    }
-
-    .intro--name {
-        color: var(--clr-orange);
-    }
-
-    .skewed {
-        flex-direction: column;
-        width: 95%;
-        height: 100%;
-        margin-bottom: 20vh;
-        background-color: #00C6BC;
-    }
-
-    .image, .text {
-        min-width: 100%;
-    }
-
-
-    .image img {
-        width: 100%;
-        height:100%;
-    }
-
-    .skewed .image::before {
-        width: 120%;
-        height: 40%;
-        top: -35%;
-        left: 50%;
-        transform: translateX(-50%) rotate(8deg);
-        box-shadow: 0 0 1000px #00C6BC;
-        background: #00C6BC;
-    }
-
-    .panel.two {
-        background-position: 100%;
+        fill: #D7E2FE;
     }
 
     .coin {
@@ -816,10 +608,6 @@ textarea {
         height: 60vh;
     }
 
-    #contact-form {
-        width: 90vw;
-    }
-
 }
 
 *,
@@ -829,6 +617,7 @@ textarea {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 
 .mouse_scroll {
     display: block;
