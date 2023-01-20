@@ -93,7 +93,7 @@ nav {
 .nav-gradient {
     /* 170e23 */
     /* background: #373922; */
-    background: #6BE9A8;
+    background: #00ffaa;
     display: flex;
     align-items: center;
     height: 100%;
@@ -199,7 +199,7 @@ a {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -212,7 +212,7 @@ a {
     background: #FE934F;
     text-align: center;
     border-radius: 5px;
-    color: #e0e0df; 
+    color: #e0e0df;
     font-weight: bold;
     line-height: 25px;
     font-size: 1.2rem;
@@ -593,10 +593,11 @@ path {
 }
 
 label {
-    color:rgb(107, 176, 211);
+    color: rgb(107, 176, 211);
 }
 
-input, textarea {
+input,
+textarea {
     width: 60%;
     min-height: 8%;
     border-radius: 4px;
@@ -604,7 +605,7 @@ input, textarea {
     margin-top: 4vh;
     font-family: Inter, sans-serif;
     max-height: 5%;
-    background-color:rgb(223, 223, 223);
+    background-color: rgb(223, 223, 223);
 }
 
 #contact {
@@ -669,7 +670,7 @@ textarea {
     font-family: Josefin Sans, sans-serif;
 }
 
-@media  screen and (max-width:900px) {
+@media screen and (max-width:900px) {
 
     path {
         fill: #ffffff00;
@@ -687,14 +688,15 @@ textarea {
         background-color: #00C6BC;
     }
 
-    .image, .text {
+    .image,
+    .text {
         min-width: 100%;
     }
 
 
     .image img {
         width: 100%;
-        height:100%;
+        height: 100%;
     }
 
     .skewed .image::before {
