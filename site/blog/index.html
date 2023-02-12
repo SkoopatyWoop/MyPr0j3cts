@@ -10,7 +10,7 @@
 	<!--- basic page needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Abstract</title>
+	<title>Axelorate Blog</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -53,28 +53,22 @@
 
 			<nav id="main-nav-wrap">
 				<ul class="main-navigation sf-menu">
-					<li class="current"><a href="index.html" title="">Home</a></li>
+					<li><a href="index.html" title="">Home</a></li>
 					<li class="has-children">
 						<a href="category.html" title="">Categories</a>
 						<ul class="sub-menu">
-							<li><a href="category.html">Wordpress</a></li>
-							<li><a href="category.html">HTML</a></li>
-							<li><a href="category.html">Photography</a></li>
-							<li><a href="category.html">UI</a></li>
-							<li><a href="category.html">Mockups</a></li>
-							<li><a href="category.html">Branding</a></li>
+							<li><a href="index.html">Hosting</a></li>
+							<li><a href="index.html">Review</a></li>
 						</ul>
 					</li>
-					<li class="has-children">
+					<li class="has-children current">
 						<a href="single-standard.html" title="">Blog</a>
 						<ul class="sub-menu">
-							<li><a href="single-video.html">Video Post</a></li>
-							<li><a href="single-audio.html">Audio Post</a></li>
-							<li><a href="single-gallery.html">Gallery Post</a></li>
-							<li><a href="single-standard.html">Standard Post</a></li>
+							<li><a href="index.html">Video Post</a></li>
+							<li><a href="index.html">Audio Post</a></li>
 						</ul>
 					</li>
-					<li><a href="style-guide.html" title="">Styles</a></li>
+					<li><a href="https://www.axelorate.com">Product</a></li>
 					<li><a href="about.html" title="">About</a></li>
 					<li><a href="contact.html" title="">Contact</a></li>
 				</ul>
@@ -216,9 +210,9 @@
 					<h4>About Our Site</h4>
 
 					<p>
-						Lorem ipsum Ut velit dolor Ut labore id fugiat in ut fugiat nostrud qui in dolore commodo eu
-						magna Duis cillum dolor officia esse mollit proident Excepteur exercitation nulla. Lorem ipsum
-						In reprehenderit commodo aliqua irure labore.
+                        Axelorate is a Software Design company that makes & updates websites for its clients. We post
+                        content (such as blogs & videos) for clients and everyday users to gain insight on what is
+                        happeining in the tech space.
 					</p>
 
 				</div> <!-- end footer-info -->
@@ -259,52 +253,62 @@
 
 					<div class="subscribe-form">
 
-						<form id="mc-form" class="group" novalidate="true">
+						<form name="submit-email" id="mc-form" class="group" novalidate="true" onsubmit="return false">
 
-							<input type="email" value="" name="dEmail" class="email" id="mc-email"
-								placeholder="Type &amp; press enter" required="">
+                            <input type="email" value="" name="Email" class="email" id="mc-email"
+                                placeholder="Type &amp; press enter" required="">
 
-							<input type="submit" name="subscribe">
+                            <input type="submit" name="subscribe">
 
-							<label for="mc-email" class="subscribe-message"></label>
-						</form>
+                            <label for="mc-email" class="subscribe-message"></label>
 
-					</div>
+                        </form>
 
-				</div> <!-- end subscribe -->
+                    </div>
 
-			</div> <!-- end row -->
+                </div> <!-- end subscribe -->
 
-		</div> <!-- end footer-main -->
+            </div> <!-- end row -->
 
-		<div class="footer-bottom">
-			<div class="row">
+        </div> <!-- end footer-main -->
 
-				<div class="col-twelve">
-					<div class="copyright">
-						<span><a href="http://www.styleshout.com/">styleshout</a></span>
-					</div>
+        <div class="footer-bottom">
+            <div class="row">
 
-					<div id="go-top">
-						<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
-					</div>
-				</div>
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span><a href="http://www.styleshout.com/">styleshout</a></span>
+                    </div>
 
-			</div>
-		</div> <!-- end footer-bottom -->
+                    <div id="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+                    </div>
+                </div>
 
-	</footer>
+            </div>
+        </div> <!-- end footer-bottom -->
 
-	<div id="preloader">
-		<div id="loader"></div>
-	</div>
+    </footer>
 
-	<!-- Java Script
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- Java Script
    ================================================== -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-   <script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzRkWHtPV9pgMb7rQ0caRmncVS5jcbp_kc9MpUH6-XKwmEC97nHE4PjXSALAMZRR3yO6g/exec'
+        const form = document.forms['submit-email']
 
+        form.addEventListener('submit', e => {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
